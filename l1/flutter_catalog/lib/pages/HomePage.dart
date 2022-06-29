@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utlils/routes.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,15 +14,20 @@ class HomePage extends StatelessWidget {
     // let pi = 227;
     const pii = 227;
     return Scaffold(
-      appBar:AppBar(
-        
+      appBar: AppBar(
         title: Text("vishy"),
       ),
       body: Center(
-        child: Text("i am vishesh here is some dt of dart ,  $a , $b , $y , $z , $c , $pii"),
+        child: Text(
+            "i am vishesh here is some dt of dart ,  $a , $b , $y , $z , $c , $pii"),
       ),
       drawer: Drawer(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.loginRoute);
+        },
+        child: Text("plus"),
+      ),
     );
   }
 }
-
